@@ -13,4 +13,6 @@
 build:
 	flutter build web
 	cp -r build/web/* docs/
+	# docs/index.html の base href を /flutter_web_github_pages/ に変更
+	sed -i '' 's|<base href="/">|<base href="/flutter_web_github_pages/">|' docs/index.html
 
